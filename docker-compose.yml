@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  telldusd:
+    image: alexanderwink/telldus-core-tdtool:latest
+    privileged: true
+    volumes:
+      - ./config/tellstick.conf:/etc/tellstick.conf
+      - /tmp/:/tmp/
+      - /dev/bus/usb:/dev/bus/usb
